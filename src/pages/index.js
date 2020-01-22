@@ -4,7 +4,7 @@ import headerStyles from '../components/header.module.scss'
 import '../components/header.module.scss'
 
 import '../components/index.css'
-import Layout from '../components/layout'
+
 
 
 const IndexPage = () => {
