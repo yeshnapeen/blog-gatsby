@@ -1,0 +1,24 @@
+*{
+    background-color: burlywood;
+}
+
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -50px;
+  }
+h6 {
+	display: flex;
+	position: absolute;
+	font: 80px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+	color: rgba(0,0,255,0.5); 
+}
+
+h6:after {
+	content: "In Middle of the Code";
+	position: absolute; left: 10px; top: 5px;
+	color: rgba(58, 39, 39, 0.5);   
+}
