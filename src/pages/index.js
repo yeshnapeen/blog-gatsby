@@ -1,7 +1,6 @@
 import React from "react";
 import {graphql,useStaticQuery} from 'gatsby'
-import 'semantic-ui-css/semantic.min.css'
-import Layout from '../components/layout'
+
 import letterb from '../components/Letter-b.gif'
 import letterw from '../components/Letter-w.gif'
 import letterc from '../components/Letter-c.gif'

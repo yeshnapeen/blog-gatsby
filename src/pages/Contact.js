@@ -1,41 +1,11 @@
 import React, { Component } from 'react';
 import Layout from '../components/layout'
-import { Segment, Divider, Grid, Button, Header, Icon,List,Menu,Label,Card, TextArea, Container,Form,Reveal,Input } from 'semantic-ui-react'
-import { Link } from 'gatsby';
-import axios from 'axios';
-
-class contactContent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-
-
-          name: '',
-          email: '',
-          message: ''
-        }
-
-        this.handleChange= this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-
-      }
-      handleChange =e => {
-        this.setState({ [e.target.name]: e.target.value })
-      }
+import {  Divider, Grid, Button, Header, Icon,List,Menu,Label,Card, TextArea, Container,Form,Reveal,Input } from 'semantic-ui-react'
 
 
 
-      async handleSubmit(e){
-        e.preventDefault()
-        const {name,message,email} = this.state
+class contactContent {
 
-        const form = await axios.post('/api/form',{
-          name,
-          message,
-          email
-        })
-      }
- 
 
 
   

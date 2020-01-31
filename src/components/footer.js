@@ -1,9 +1,9 @@
 import React from 'react'
 import {graphql,useStaticQuery} from 'gatsby'
-import { Icon ,List} from 'semantic-ui-react'
+import {List} from 'semantic-ui-react'
 import {Link} from 'gatsby'
-import footerStyles from './footer.module.scss'
 import 'semantic-ui-css/semantic.min.css'
+import footerStyles from './footer.module.scss'
 
 const Footer = () => {
     const data = useStaticQuery(graphql`

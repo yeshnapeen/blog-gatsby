@@ -13,6 +13,14 @@ module.exports = {
     author: 'Yeshna'
   },
   plugins: [
+    new MiniCssExtractPlugin()],
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        },
+      
       'gatsby-plugin-sass',
       {
           resolve: 'gatsby-source-filesystem',
@@ -41,4 +49,5 @@ module.exports = {
       'gatsby-transformer-sharp'
       
   ]
+}
 }

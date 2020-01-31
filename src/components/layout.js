@@ -1,14 +1,9 @@
-import React, { Component, createRef } from 'react'
-
+import React  from 'react'
 import {graphql,useStaticQuery} from 'gatsby'
 import Footer from '../components/footer'
 import '../styles/index.scss'
-import layoutStyles from './layout.module.scss'
-import {List, Header, Segment,Divider,Image, Sticky} from 'semantic-ui-react'
-import L from '../components/index.module.scss'
-import { Link } from 'gatsby'
+import {Header, Segment} from 'semantic-ui-react'
 import '../components/index.module.scss'
-import headerStyles from '../components/header.module.scss'
 import footer from '../components/footer.module.scss'
 
 const Layout =(props) => {
