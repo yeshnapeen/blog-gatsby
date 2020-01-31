@@ -1,21 +1,13 @@
 import React from 'react'
-import {graphql,useStaticQuery} from 'gatsby'
 import {List} from 'semantic-ui-react'
 import {Link} from 'gatsby'
-import 'semantic-ui-css/semantic.min.css'
+
+
+
 import footerStyles from './footer.module.scss'
 
 const Footer = () => {
-    const data = useStaticQuery(graphql`
-    query{
-        site{
-            siteMetadata{
-                author
-            }
-        }
-    }
-    `)
-
+    
     return(
 
     <footer className={footerStyles.sticky}>
