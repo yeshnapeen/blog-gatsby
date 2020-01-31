@@ -1,6 +1,7 @@
 {
   "name": "gatsby-starter-hello-world",
   "private": true,
+  "proxy": "http://localhost:8001",
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "MIT",
@@ -14,8 +15,13 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.39",
+    "gatsby-plugin-less": "^3.0.18",
     "gatsby-plugin-sass": "^2.1.27",
     "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-remark-images": "^3.0.10",
@@ -23,19 +29,31 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.3.13",
+    "gulp": "^4.0.2",
     "node-sass": "^4.13.1",
+    "nodemailer": "^6.4.2",
+    "nodemon": "^2.0.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-less": "^2.4.1",
+    "semantic-ui-react": "^0.88.2"
   },
   "devDependencies": {
     "env-cmd": "^10.0.1",
     "prettier": "^1.19.1"
   },
+
+  
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-hello-world.git"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-hello-world#readme",
+  "main": "index.js",
+  "keywords": [],
+  "author": ""
 }

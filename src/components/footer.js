@@ -1,7 +1,9 @@
 import React from 'react'
 import {graphql,useStaticQuery} from 'gatsby'
-
+import { Icon ,List} from 'semantic-ui-react'
+import {Link} from 'gatsby'
 import footerStyles from './footer.module.scss'
+import 'semantic-ui-css/semantic.min.css'
 
 const Footer = () => {
     const data = useStaticQuery(graphql`
@@ -16,8 +18,13 @@ const Footer = () => {
 
     return(
 
-    <footer className={footerStyles}>
-        <p> Created by {data.site.siteMetadata.author}, © 2020 </p>
+    <footer className={footerStyles.sticky}>
+        <List link animated verticalAlign='middle' floated='right'  size='massive'>
+                <List.Item as='a'> <Link to='/'>Home</Link></List.Item> 
+                <List.Item as='a'><Link to='/Blog'>Blog</Link></List.Item>
+                <List.Item as='a'><Link to='/About'>About</Link></List.Item>
+                <List.Item as='a'><Link to='/Contact'>Contact</Link></List.Item>
+        </List>
     </footer>
     )
 }

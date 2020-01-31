@@ -1,16 +1,175 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Layout from '../components/layout'
+import { Segment, Divider, Grid, Button, Header, Icon,List,Menu,Label,Card, TextArea, Container,Form,Reveal,Input } from 'semantic-ui-react'
+import { Link } from 'gatsby';
+import axios from 'axios';
+
+class contactContent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
 
 
-const contactContent = () => {
-    return (
-        <Layout>
-            <h1>Contact Page</h1>
-            <p>Can be contacted on peenith@hotmail.com</p>  
-        </Layout>
+          name: '',
+          email: '',
+          message: ''
+        }
 
-    )
+        this.handleChange= this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+
+      }
+      handleChange =e => {
+        this.setState({ [e.target.name]: e.target.value })
+      }
+
+
+
+      async handleSubmit(e){
+        e.preventDefault()
+        const {name,message,email} = this.state
+
+        const form = await axios.post('/api/form',{
+          name,
+          message,
+          email
+        })
+      }
+ 
+
+
+  
+    render() {
+        return (
+    <div>
+            <Layout>
+             
+    <Grid columns={2} stackable >
+        
+
+      <Grid.Row>
+        
+        <Grid.Column >
+        
+
+           
+        
+            <Header padded='very' textAlign='center'>
+            <Container text textAlign='center'>
+                
+            <br/><br></br> <br></br><br></br> <br></br> <br></br> <br></br>
+                    <List floated right verticalAlign='middle'>
+                    <List.Item>
+                    <Header size='tiny' color='black' padded ='very'>
+                    <Icon.Group >
+                        <Icon name ='location arrow'
+                        color='black'/>
+                                Melbourne, Australia 
+                                <Divider></Divider>
+                    </Icon.Group>
+                    </Header>
+                    <Header size='tiny' color='blue' padded ='very'>
+                    <Icon.Group >
+                        <Icon name='mail'
+                        color='black'/>
+                        <a href="mailto:someone@yoursite.com" color='black'>  peenith@hotmail.com </a>
+                        
+                    </Icon.Group>
+                    </Header>
+                    </List.Item>
+                    <List.Item>
+                    
+                    </List.Item>
+                    <List.Item>
+                    
+                    <Icon.Group >
+                    
+                    <a href="https://au.linkedin.com/in/yeshna-peenith">
+                        <Icon name ='linkedin'
+                        color='blue'
+                        size='big'
+                        />
+                        </a>
+                    
+                    </Icon.Group>
+                    </List.Item>
+                    
+           
+                </List>     
+            </Container> 
+            </Header>
+        </Grid.Column>
+        <Divider vertical>Or</Divider>  
+        <Divider vertical></Divider>
+        <Grid.Column>
+            <br></br>
+            <Header as='h2' textAlign='left'>Have some Questions?</Header>
+            
+          <Container text>
+              
+                <Header textAlign='left'>
+                <Form action="https://getform.io/f/ab2ea6db-8b9c-43d2-86c9-284a36817d88" method='POST' >
+                
+                    <Form.Field
+                        id='form-input-control-first-name'
+                        control={Input}
+                        label='First Name'
+                        placeholder='First name'
+                        width='10'
+                        name='name'
+                         />
+                
+                    <Form.Field
+                     id='form-textarea-control-opinion'
+                     control={TextArea}
+                    label='Enquires'
+                    placeholder='message'
+                    width='10'
+                    />
+                    
+                    
+                    <Form.Field
+                     id='form-input-control-error-email'
+                     control={Input}
+                     label='Email'
+                     placeholder='janedoe@live.com'
+                     width='10'
+                     name='email'
+                      />
+                    
+                    <Form.Field
+                    id='form-button-control-public'
+                    control={Button}
+                    content='Confirm'
+                    
+                    />
+
+                </Form>
+                </Header>
+                </Container>
+                
+          
+          
+       
+        </Grid.Column>
+       
+      </Grid.Row>
+      
+    </Grid>
     
-}
+            
+                
+            
+        </Layout>
+        </div>
+        )
+    };
+  }
 
-export default contactContent;
+    
+        
+        
+        
+
+
+export default contactContent

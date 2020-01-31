@@ -1,12 +1,15 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link} from 'gatsby';
 
+import { Card,Divider,Segment, Container,Grid,Label,Image, List,Header} from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 import Layout from '../components/layout'
-
 import {graphql,useStaticQuery} from 'gatsby'
-import blogStyles from '../components/Blog.module.scss'
+
+
 
 const BlogPage = () => {
+  
     const data = useStaticQuery(graphql`
     query{
         allMarkdownRemark{
@@ -15,10 +18,19 @@ const BlogPage = () => {
               frontmatter{
                 title
                 date
+                description
+              }
+              internal {
+                content
+              }
+              wordCount {
+                words
               }
               fields{
                 slug
               }
+             
+              
             }
           }
         }
@@ -26,24 +38,35 @@ const BlogPage = () => {
     `
     )
 
-    return (
-        <Layout>
-            <h1>Blog</h1>
-            <ol className={blogStyles.posts}>
-                {data.allMarkdownRemark.edges.map((edge) =>{
-                    return (
-                        <li className={blogStyles.post}>
-                            <Link to ={`/Blog/${edge.node.fields.slug}`}>
-                                <h2>{edge.node.frontmatter.title}</h2>
-                                <p>{edge.node.frontmatter.date}</p>
-                            </Link>
-                        </li>
-                    )
-                })}
-            </ol>
-        </Layout>
-
-    )
+  return (
+  <div>
+    <Layout > 
+      <Segment vertical>
+        <Container text textAlign='justified'>
+          <List className >
+            {data.allMarkdownRemark.edges.map((edge) =>{
+          return (
+            <List.Item  >
+              <Link to ={`/Blog/${edge.node.fields.slug}`}>   
+              <Grid.Column>
+                <Segment padded>
+                  <Label attached='top left'><Header size='medium'>{edge.node.frontmatter.title}</Header></Label>
+                  <Header size='small'> {edge.node.frontmatter.description} </Header>
+                  <p></p>
+                  <p>{edge.node.frontmatter.date}</p>
+                </Segment>
+              </Grid.Column> 
+            </Link>
+          </List.Item>
+            )
+          })}
+        </List>
+        </Container>
+   </Segment>
+    </Layout>
+    </div>
+    
+  )
 }
 
 export default BlogPage
