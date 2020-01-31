@@ -4,7 +4,7 @@ import {Link} from 'gatsby'
 
 
 
-import footerStyles from './footer.module.scss'
+import footerStyles from './footer.module.css'
 
 const Footer = () => {
     

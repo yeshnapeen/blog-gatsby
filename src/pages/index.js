@@ -1,17 +1,20 @@
 import React from "react";
+
+
+
 import {graphql,useStaticQuery} from 'gatsby'
 
 import letterb from '../components/Letter-b.gif'
 import letterw from '../components/Letter-w.gif'
 import letterc from '../components/Letter-c.gif'
 import L from '../components/index.module.scss'
-import footer from '../components/footer.module.scss'
-
+import footer from '../components/footer.module.css'
+import 'semantic-ui-css/semantic.min.css'
 
 import { Label, Divider, Image, Grid, Header, GridColumn, Segment } from 'semantic-ui-react'
 import { Link } from "gatsby";
 
-const Index =(props) => {
+const Index =() => {
   const data = useStaticQuery(graphql`
   query{
       site{
@@ -23,10 +26,9 @@ const Index =(props) => {
   `)
       return(
   <div>
-    
     <Segment  inverted > 
-                <Header textAlign='center' size='huge' >Middle of the Code.</Header>   
-            </Segment>
+      <Header textAlign='center' size='huge' >Middle of the Code.</Header>   
+    </Segment>
             
     
     <Header as='h3' textAlign='center'>

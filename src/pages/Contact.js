@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Layout from '../components/layout'
-import {  Divider, Grid, Button, Header, Icon,List,Menu,Label,Card, TextArea, Container,Form,Reveal,Input } from 'semantic-ui-react'
+import {  Divider, Grid, Button, Header, Icon,List, TextArea, Container,Form,Input } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css';
 
 
+const contact =() => {
 
-class contactContent {
-
-
-
-  
-    render() {
         return (
     <div>
             <Layout>
@@ -93,7 +89,7 @@ class contactContent {
                      id='form-textarea-control-opinion'
                      control={TextArea}
                     label='Enquires'
-                    placeholder='message'
+                    name='message'
                     width='10'
                     />
                     
@@ -133,7 +129,7 @@ class contactContent {
         </Layout>
         </div>
         )
-    };
+    
   }
 
     
@@ -142,4 +138,4 @@ class contactContent {
         
 
 
-export default contactContent
+export default contact

@@ -3,8 +3,8 @@ import {graphql,useStaticQuery} from 'gatsby'
 import Footer from '../components/footer'
 import '../styles/index.scss'
 import {Header, Segment} from 'semantic-ui-react'
-import '../components/index.module.scss'
-import footer from '../components/footer.module.scss'
+
+import footer from '../components/footer.module.css'
 
 const Layout =(props) => {
     const data = useStaticQuery(graphql`

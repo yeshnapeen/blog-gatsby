@@ -7,25 +7,22 @@
 
 
 module.exports = {
+
+
+
   /* Your site config here */
   siteMetadata : {
     title : 'In the Middle of the Code',
     author: 'Yeshna'
-  },
-  plugins: [
-    new MiniCssExtractPlugin()],
-    module: {
-      rules: [
-        {
-          test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        },
-      
-      'gatsby-plugin-sass',
-      {
-          resolve: 'gatsby-source-filesystem',
-          options: {
-              name: 'src',
+    },
+    plugins: [
+    
+
+    'gatsby-plugin-sass',
+    {
+        resolve: 'gatsby-source-filesystem',
+        options: {
+            name: 'src',
               path: `${__dirname}/src/`
           }
       },
@@ -46,8 +43,10 @@ module.exports = {
               ]
           }
       },
-      'gatsby-transformer-sharp'
+      'gatsby-transformer-sharp',
+      
+
+   
       
   ]
-}
 }

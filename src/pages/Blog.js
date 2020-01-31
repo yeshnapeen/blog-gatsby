@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link} from 'gatsby';
-
-import { Segment, Container,Grid,Label,Image, List,Header} from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css';
+import { Segment, Container,Grid,Label, List,Header} from 'semantic-ui-react'
 
 import Layout from '../components/layout'
 import {graphql,useStaticQuery} from 'gatsby'
