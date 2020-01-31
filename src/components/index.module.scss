@@ -1,0 +1,66 @@
+
+
+h7{
+	
+	font: 45px Ariel ;
+	letter-spacing: -2px;
+	color:white  ;
+	padding-top: 12px;
+	padding-right: 100%;
+	padding-bottom: 12px ;
+	padding-left: 0;
+	background-color:#063861 !important;
+
+}
+
+h8 {
+
+	padding-right: 100%;
+	background-color:white !important;
+  }
+
+
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 90%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #2a4166;
+  }
+  
+  .container:hover .overlay {
+	opacity: 1;
+  }
+  
+  .text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+
+  .image {
+	display: block;
+	width: 100%;
+	
+  }
+
+  
+  
+  h3{
+	  text-align: 'middle';
+  }
+
+  
+ 
