@@ -30,8 +30,8 @@ description: How I create a blog using Gatsby. Discover what I learned from thou
 >>.
 >>.
 >>.
->>
->>
+>>.
+>>.
 >>
 >>
 
