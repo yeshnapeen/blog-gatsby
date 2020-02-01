@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link} from 'gatsby';
 import 'semantic-ui-css/semantic.min.css';
-import { Segment, Container,Grid,Label, List,Header} from 'semantic-ui-react'
+import { Segment, Container,Grid,Label, List,Header,Responsive} from 'semantic-ui-react'
 
 import Layout from '../components/layout'
 import {graphql,useStaticQuery} from 'gatsby'
@@ -40,6 +40,7 @@ const BlogPage = () => {
 
   return (
   <div>
+    <Responsive>
     <Layout > 
       <Segment vertical>
         <Container text textAlign='justified'>
@@ -64,6 +65,7 @@ const BlogPage = () => {
         </Container>
    </Segment>
     </Layout>
+    </Responsive>
     </div>
     
   )
