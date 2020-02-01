@@ -3,7 +3,7 @@ import {Link} from 'gatsby'
 import {graphql,useStaticQuery} from 'gatsby'
 
 import '../styles/index.scss'
-import {Header, Segment,List,Responsive} from 'semantic-ui-react'
+import {Header, Segment,List,Icon} from 'semantic-ui-react'
 
 import footer from '../components/footer.module.css'
 
@@ -19,25 +19,38 @@ const Layout =(props) => {
     `)
         
     return (
-    <div>
-        <Responsive>
+    <body className={footer.body}>
+        
             <Segment  inverted > 
-                <Header textAlign='left' size='huge' >Middle of the Code. 
-                <List link  horizontal  size='massive' floated='right' >
-                <List.Item active> <Link to='/'> <Header color='grey' size='tiny' > Home</Header></Link></List.Item> 
-                <List.Item as='a' ><Link to='/Blog'><Header color='grey' size='tiny'>Blog </Header></Link></List.Item>
-                <List.Item as='a'><Link to='/About'> <Header color='grey' size='tiny'>About</Header></Link></List.Item>
-                <List.Item as='a'><Link to='/Contact'><Header color='grey' size='tiny'>Contact</Header></Link></List.Item>
-                 
-        </List>
-        </Header> 
+                <List link  horizontal  size='massive' floated='right'>
+                    <List.Item active> <Link to='/'> <Header color='grey' size='tiny' textAlign='right' > Home</Header></Link></List.Item> 
+                    <List.Item as='a' ><Link to='/Blog'><Header color='grey' size='tiny' textAlign='right'>Blog </Header></Link></List.Item>
+                    <List.Item as='a'><Link to='/About'> <Header color='grey' size='tiny'textAlign='right'>About</Header></Link></List.Item>
+                    <List.Item as='a'><Link to='/Contact'><Header color='grey' size='tiny' textAlign='right'>Contact</Header></Link></List.Item>
+                 </List>
+                <Header textAlign='left' size='huge' >Middle of the Code.</Header>
+                
+
             </Segment>
+         
            
             <p>{props.children}</p>
             <div className={footer.Footer}> 
                 <Segment  inverted > 
-                    <Header textAlign='right' size='tiny' >Created by {data.site.siteMetadata.author}, © 2020 </Header>   
+                    <Header textAlign='right' size='tiny' >
+                    <Icon.Group >
+                    
+                    <a href="https://au.linkedin.com/in/yeshna-peenith">
+                        <Icon name ='linkedin'
+                        color='blue'
+                        size='big'
+                        />
+                        </a>  Created by {data.site.siteMetadata.author}, © 2020  
+                    
+                    </Icon.Group>  
+                    </Header>
                 </Segment>
+
             </div >
             
             <div>
@@ -45,10 +58,10 @@ const Layout =(props) => {
 
             
             </div>
-        
-            </Responsive>
-    </div>   
+      
+    </body>   
     )
 }
 
 export default Layout
+
