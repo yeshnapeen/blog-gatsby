@@ -10,4 +10,12 @@
     font-weight: solid;
 }
 
+@media screen and (max-width : 480px){
+    body {
+    font-style: normal;
+    }
+}
+
+
+
 
