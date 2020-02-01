@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout'
-import {  Divider, Grid, Button, Header, Icon,List, TextArea, Container,Form,Input } from 'semantic-ui-react'
+import {  Divider, Grid, Button, Header, Icon,List, TextArea, Container,Form,Input,Responsive } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 
 
@@ -8,6 +8,7 @@ const contact =() => {
 
         return (
     <div>
+        <Responsive>
             <Layout>
              
     <Grid columns={2} stackable >
@@ -127,6 +128,7 @@ const contact =() => {
                 
             
         </Layout>
+        </Responsive>
         </div>
         )
     
