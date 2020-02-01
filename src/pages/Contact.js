@@ -1,79 +1,24 @@
 import React from 'react';
 import Layout from '../components/layout'
-import {  Divider, Grid, Button, Header, Icon,List, TextArea, Container,Form,Input,Responsive } from 'semantic-ui-react'
+import footer from '../components/footer.module.css'
+import {  Divider, Grid, Button, Header, Icon,List, TextArea, Container,Form,Input,Responsive, Segment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 
 
 const contact =() => {
 
         return (
-    <div>
-        <Responsive>
+    <body className={footer.body}>
+      
             <Layout>
-             
-    <Grid columns={2} stackable >
-        
-
-      <Grid.Row>
-        
-        <Grid.Column >
-        
-
            
-        
-            <Header padded='very' textAlign='center'>
-            <Container text textAlign='center'>
-                
-            <br/><br></br> <br></br><br></br> <br></br> <br></br> <br></br>
-                    <List floated right verticalAlign='middle'>
-                    <List.Item>
-                    <Header size='tiny' color='black' padded ='very'>
-                    <Icon.Group >
-                        <Icon name ='location arrow'
-                        color='black'/>
-                                Melbourne, Australia 
-                                <Divider></Divider>
-                    </Icon.Group>
-                    </Header>
-                    <Header size='tiny' color='blue' padded ='very'>
-                    <Icon.Group >
-                        <Icon name='mail'
-                        color='black'/>
-                        <a href="mailto:someone@yoursite.com" color='black'>  peenith@hotmail.com </a>
-                        
-                    </Icon.Group>
-                    </Header>
-                    </List.Item>
-                    <List.Item>
-                    
-                    </List.Item>
-                    <List.Item>
-                    
-                    <Icon.Group >
-                    
-                    <a href="https://au.linkedin.com/in/yeshna-peenith">
-                        <Icon name ='linkedin'
-                        color='blue'
-                        size='big'
-                        />
-                        </a>
-                    
-                    </Icon.Group>
-                    </List.Item>
-                    
-           
-                </List>     
-            </Container> 
-            </Header>
-        </Grid.Column>
-        <Divider vertical>Or</Divider>  
-        <Divider vertical></Divider>
-        <Grid.Column>
-            <br></br>
-            <Header as='h2' textAlign='left'>Have some Questions?</Header>
+ 
+            
+            
             
           <Container text>
-              
+          <Header as='h2'>Have some Questions?</Header>
+          
                 <Header textAlign='left'>
                 <Form action="https://getform.io/f/ab2ea6db-8b9c-43d2-86c9-284a36817d88" method='POST' >
                 
@@ -113,23 +58,21 @@ const contact =() => {
 
                 </Form>
                 </Header>
+                
+                
                 </Container>
                 
           
           
        
-        </Grid.Column>
-       
-      </Grid.Row>
-      
-    </Grid>
+
     
             
-                
-            
+   
+
         </Layout>
-        </Responsive>
-        </div>
+        
+        </body>
         )
     
   }
