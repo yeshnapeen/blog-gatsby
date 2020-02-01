@@ -11,18 +11,3 @@
 }
 
 
-
-@media only screen and (max-width: 600px) {
-
-.sticky {
-  
-    width: 200px;
-    position: fixed;
-    z-index: 5;
-    top: 150px;
-    
-    right : 100px;
-    color: black;
-    padding: 8px 0;
-    }
-}
