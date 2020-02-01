@@ -1,5 +1,4 @@
 
-
 h7{
 	
 	font: 45px Ariel ;
@@ -20,7 +19,7 @@ h8 {
   }
 
 
-
+  @media(hover: hover) and (pointer: fine) {
 .overlay {
 	position: absolute;
 	top: 0;
@@ -33,6 +32,7 @@ h8 {
 	transition: .5s ease;
 	background-color: #2a4166;
   }
+}
   
   .container:hover .overlay {
 	opacity: 1;
