@@ -11,7 +11,7 @@ import L from '../components/index.module.scss'
 import footer from '../components/footer.module.css'
 import 'semantic-ui-css/semantic.min.css'
 
-import { Label, Divider, Image, Grid, Header, GridColumn, Segment } from 'semantic-ui-react'
+import { Label, Divider, Image, Grid, Header, GridColumn, Segment ,Responsive} from 'semantic-ui-react'
 import { Link } from "gatsby";
 
 const Index =() => {
@@ -26,8 +26,9 @@ const Index =() => {
   `)
       return(
   <div>
+    <Responsive>
     <Segment  inverted > 
-      <Header textAlign='center' size='huge' >Middle of the Code.</Header>   
+      <Header textAlign='left' size='huge' >Middle of the Code.</Header>   
     </Segment>
             
     
@@ -82,7 +83,7 @@ const Index =() => {
                     <Header textAlign='right' size='tiny' >Created by {data.site.siteMetadata.author}, © 2020 </Header>   
                 </Segment>
             </div >
-    
+            </Responsive>
     </div>
     
         )
