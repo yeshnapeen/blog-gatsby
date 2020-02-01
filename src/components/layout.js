@@ -1,8 +1,9 @@
 import React  from 'react'
+import {Link} from 'gatsby'
 import {graphql,useStaticQuery} from 'gatsby'
-import Footer from '../components/footer'
+
 import '../styles/index.scss'
-import {Header, Segment} from 'semantic-ui-react'
+import {Header, Segment,List,Responsive} from 'semantic-ui-react'
 
 import footer from '../components/footer.module.css'
 
@@ -19,11 +20,19 @@ const Layout =(props) => {
         
     return (
     <div>
-        
+        <Responsive>
             <Segment  inverted > 
-                <Header textAlign='center' size='huge' >Middle of the Code.</Header>   
+                <Header textAlign='left' size='huge' >Middle of the Code. 
+                <List link  horizontal  size='massive' floated='right' >
+                <List.Item active> <Link to='/'> <Header color='grey' size='tiny' > Home</Header></Link></List.Item> 
+                <List.Item as='a' ><Link to='/Blog'><Header color='grey' size='tiny'>Blog </Header></Link></List.Item>
+                <List.Item as='a'><Link to='/About'> <Header color='grey' size='tiny'>About</Header></Link></List.Item>
+                <List.Item as='a'><Link to='/Contact'><Header color='grey' size='tiny'>Contact</Header></Link></List.Item>
+                 
+        </List>
+        </Header> 
             </Segment>
-            <Footer></Footer>
+           
             <p>{props.children}</p>
             <div className={footer.Footer}> 
                 <Segment  inverted > 
@@ -37,7 +46,7 @@ const Layout =(props) => {
             
             </div>
         
-        
+            </Responsive>
     </div>   
     )
 }
